@@ -12,8 +12,8 @@ let cars = [
     Brand: "Wolksvagen",
     FuelType: "diesel"}, 
 
-    {model: "Mitsubishi",
-    Brand: "Social Media Manager",
+    {model: "SUV",
+    Brand: "Mitsubishi",
     FuelType: "diesel"},
 
     {model: "SUV",
@@ -43,25 +43,20 @@ let cars = [
 ]
 
 const gasCar = cars.filter(checkGas);
+const dieselCar = cars.filter(checkdiesel);
+const electricCar = cars.filter(checkElectric);
 
 function checkGas(car) {
     return car.FuelType == "gas";
 }
-
 console.log(gasCar)
-
-const dieselCar = cars.filter(checkdiesel);
 
 function checkdiesel(car) {
     return car.FuelType == "diesel";
 }
-
 console.log(dieselCar)
-
-const electricCar = cars.filter(checkElectric);
 
 function checkElectric(car) {
     return car.FuelType == "electric";
 }
-
 console.log(electricCar)
