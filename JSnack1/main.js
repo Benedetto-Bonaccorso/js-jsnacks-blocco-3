@@ -1,3 +1,4 @@
+
 let cars = [
 
     {model: "SUV",
@@ -45,6 +46,7 @@ let cars = [
 const gasCar = cars.filter(checkGas);
 const dieselCar = cars.filter(checkdiesel);
 const electricCar = cars.filter(checkElectric);
+const otherCars = cars.filter(checkOthers)
 
 function checkGas(car) {
     return car.FuelType == "gas";
@@ -60,3 +62,8 @@ function checkElectric(car) {
     return car.FuelType == "electric";
 }
 console.log(electricCar)
+
+function checkOthers(car){
+    return car.FuelType != "diesel" && car.FuelType != "gas" && car.FuelType != "electric"
+}
+console.log(otherCars)
